@@ -18,10 +18,10 @@ RUN dnf -y update && \
 
 # Download and extract website template
 WORKDIR /var/www/html
-RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page285/farmfresh.zip
-RUN unzip farmfresh.zip
-RUN mv /var/www/html/organic-farm-website-template/* /var/www/html/ && \
+RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page285/bitcypo.zip
+RUN unzip bitcypo.zip
+RUN mv /var/www/html/bitcypo-html/* /var/www/html/ && \
     rm -rf *.zip && \
-    rm -rf organic-farm-website-template
+    rm -rf bitcypo-html
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
