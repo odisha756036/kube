@@ -18,10 +18,10 @@ RUN dnf -y update && \
 
 # Download and extract website template
 WORKDIR /var/www/html
-RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page296/healet.zip
-RUN unzip healet.zip
-RUN mv /var/www/html/healet-html/* /var/www/html/ && \
+RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page285/farmfresh.zip
+RUN unzip farmfresh.zip
+RUN mv /var/www/html/organic-farm-website-template/* /var/www/html/ && \
     rm -rf *.zip && \
-    rm -rf healet-html
+    rm -rf organic-farm-website-template
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
