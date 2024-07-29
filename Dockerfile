@@ -2,7 +2,7 @@
 FROM centos:latest
 
 # Metadata and labels
-LABEL Name="Trilochan Karan" \
+LABEL Name="Trilochan" \
       Email="trilochankaran94@gmail.com"
 
 # Update YUM repos to use vault.centos.org
