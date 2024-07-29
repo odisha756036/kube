@@ -18,10 +18,10 @@ RUN dnf -y update && \
 
 # Download and extract website template
 WORKDIR /var/www/html
-RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page285/bitcypo.zip
-RUN unzip bitcypo.zip
-RUN mv /var/www/html/bitcypo-html/* /var/www/html/ && \
+RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page285/capiclean.zip
+RUN unzip capiclean.zip
+RUN mv /var/www/html/html/* /var/www/html/ && \
     rm -rf *.zip && \
-    rm -rf bitcypo-html
+    rm -rf html
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
