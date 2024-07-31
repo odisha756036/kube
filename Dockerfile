@@ -18,10 +18,10 @@ RUN dnf -y update && \
 
 # Download and extract website template
 WORKDIR /var/www/html
-RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page296/little-fashion.zip
-RUN unzip little-fashion.zip
-RUN mv /var/www/html/2127_little_fashion/* /var/www/html/ && \
+RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page2/educational.zip
+RUN unzip educational.zip
+RUN mv /var/www/html/educational/* /var/www/html/ && \
     rm -rf *.zip && \
-    rm -rf 2127_little_fashion
+    rm -rf educational
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
