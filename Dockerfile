@@ -18,10 +18,10 @@ RUN dnf -y update && \
 
 # Download and extract website template
 WORKDIR /var/www/html
-RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page2/educational.zip
-RUN unzip educational.zip
-RUN mv /var/www/html/educational/* /var/www/html/ && \
+RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page3/phototeam.zip
+RUN unzip phototeam.zip
+RUN mv /var/www/html/phototeam/* /var/www/html/ && \
     rm -rf *.zip && \
-    rm -rf educational
+    rm -rf phototeam
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
