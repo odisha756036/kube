@@ -18,10 +18,10 @@ RUN dnf -y update && \
 
 # Download and extract website template
 WORKDIR /var/www/html
-RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page284/maker.zip
-RUN unzip maker.zip
-RUN mv /var/www/html/maker/* /var/www/html/ && \
+RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page2/educational.zip
+RUN unzip educational.zip
+RUN mv /var/www/html/educational/* /var/www/html/ && \
     rm -rf *.zip && \
-    rm -rf maker
+    rm -rf educational
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
