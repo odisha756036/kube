@@ -2,7 +2,7 @@
 FROM centos:latest
 
 # Metadata and labels
-LABEL Name="Trilochan Karan" \
+LABEL Name="Trilochan" \
       Email="trilochankaran94@gmail.com"
 
 # Update YUM repos to use vault.centos.org
@@ -18,10 +18,10 @@ RUN dnf -y update && \
 
 # Download and extract website template
 WORKDIR /var/www/html
-RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page3/phototeam.zip
-RUN unzip phototeam.zip
-RUN mv /var/www/html/phototeam/* /var/www/html/ && \
+RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page296/little-fashion.zip
+RUN unzip little-fashion.zip
+RUN mv /var/www/html/2127_little_fashion/* /var/www/html/ && \
     rm -rf *.zip && \
-    rm -rf phototeam
+    rm -rf 2127_little_fashion
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
